@@ -21,8 +21,10 @@ def count_nucleotides(seq):
             nt_counts[1] +=1
         elif nt == "g":
             nt_counts[2] +=1
-        else:
+        elif nt == "t":
             nt_counts[3] +=1
+        else:
+            sys.exit("Error: Only ACGT allowed.")
     return nt_counts
 
 if __name__ == "__main__":

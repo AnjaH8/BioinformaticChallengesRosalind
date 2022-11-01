@@ -2,10 +2,11 @@
 import sys
 def main(argv):
     # Check if there is an argument
-    if argv == None:
+    if len(argv) == 1:
         print("Usage: REVC_complementing_DNA_strand.py <DNA-sequence>")
+        exit()
 
-    argv = argv.lower()
+    argv = argv[1].lower()
     # Complement the DNA strand 3' to 5'
     complement = ""
     for nt in range(len(argv)-1, -1, -1):
@@ -24,4 +25,4 @@ def main(argv):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv)

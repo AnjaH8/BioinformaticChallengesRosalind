@@ -1,10 +1,11 @@
 import sys
 
 def main(argv):
-    if argv == None:
+    if len(argv) == 1:
         print("Usage: DNA_count_nucleotides.py <DNA-sequence>")
+        exit()
     # list of nucleotide counts in order A, C, G, T
-    nt_counts = count_nucleotides(argv)
+    nt_counts = count_nucleotides(argv[1])
 
     for count in nt_counts:
         print(count, end = " ")
@@ -28,4 +29,4 @@ def count_nucleotides(seq):
     return nt_counts
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv)
